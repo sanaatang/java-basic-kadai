@@ -1,6 +1,5 @@
 package kadai_026;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Jyanken_Chapter26 {
@@ -15,7 +14,7 @@ public class Jyanken_Chapter26 {
 		
 		String choice = scanner.nextLine();
 		
-		while (!choice.equals("r") && !choice.equals("S") && !choice.equals("p")) {
+		while (!choice.equals("r") && !choice.equals("s") && !choice.equals("p")) {
 			System.out.println("正しく入力してください");
 			choice = scanner.nextLine();			
 		}
@@ -25,8 +24,7 @@ public class Jyanken_Chapter26 {
 	//相手の手を決める
 	public String getRandom() {
 		String[] choices = {"r", "s", "p"};
-		Random random = new Random();
-		int index = random.nextInt(3);
+		int index = (int) Math.floor(Math.random() * 3);
 		return choices[index];
 		
 	}
